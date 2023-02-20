@@ -1,0 +1,84 @@
+.right{
+    position: fixed;
+    left: 70%;
+    width: 30%;
+    padding-bottom: 100%;
+    padding-top: 5%;
+}
+
+.right-txt{
+    color: seashell;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-left: 5%;
+}
+
+.right-top{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 400px; 
+    padding-bottom: 5%;
+}
+
+.right-profilbtn{
+    background-color: #444444;
+    border: none;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.right-btn{
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 25%;
+}
+
+.rightbtn-1{
+    width: 240px;
+    height: 35px;
+    border-radius: 99999px;
+    border: none;   
+    background-color: seashell; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+}
+
+.rightbtn-1:hover{
+    background-color: #5271FF;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.rightbtn-2{
+    width: 240px;
+    height: 35px;
+    border-radius: 99999px;
+    border: none;   
+    background-color: seashell; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+}
+
+.rightbtn-2:hover{
+    background-color: #5271FF;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.rightbtn-3{
+    width: 240px;
+    height: 35px;
+    border-radius: 99999px;
+    border: none;   
+    background-color: seashell; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+}
+
+.rightbtn-3:hover{
+    background-color: #5271FF;
+    transition: 1s;
+    cursor: pointer;
+}

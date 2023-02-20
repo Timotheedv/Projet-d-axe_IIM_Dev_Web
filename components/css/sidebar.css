@@ -1,0 +1,81 @@
+.sidebar{
+    position: fixed;
+    padding-bottom: 100%;    
+    width:30%;
+}
+
+.sidebar-btn{
+ height: 130px; 
+ display: flex;
+ flex-direction: column;    
+ justify-content: space-between;
+ margin-top: 5%;
+ padding: 10%;
+ margin-left: 30%;
+}
+
+.sidebar-1{
+margin-left: 55%;
+margin-top: 5%;
+border: none;
+background-color: #444444;
+}
+
+.sidebar-1:hover{
+    cursor: pointer;
+}
+
+
+
+/*Boutons*/
+
+.sidebar-btn1{
+    width: 240px;
+    height: 35px;
+    border-radius: 99999px;
+    border: none;   
+    background-color: seashell; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.sidebar-btn1:hover{
+   background-color: #5271FF;
+    transition: 1s;
+    cursor: pointer;
+
+}
+
+.sidebar-btn2{
+    width: 240px;
+    height: 35px;
+    border-radius: 99999px;
+    border: none;
+    background-color: seashell;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+}
+
+.sidebar-btn2:hover{
+    background-color: #5271FF;
+     transition: 1s;
+     cursor: pointer;
+ }
+
+.sidebar-btn3{
+    width: 240px;
+    height: 35px;
+    border-radius: 99999px;
+    border: none;
+    background-color: seashell;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ 
+}
+
+.sidebar-btn3:hover{
+    background-color: #5271FF;
+     transition: 1s;
+     cursor: pointer;
+ }
+
+/*:Hover*/
+
