@@ -12,19 +12,21 @@
 
 <body>
 
+ <div class="main-container">
+ <div class="sidebar-hamburger">
+      <button class="sidebar-menu">
+            <i class="fa-solid fa-bars fa-4x"></i>
+      </button>
+    </div> 
+
    <!--Main container-->
 
-   <div class="main-container">
+   <div class="container">
 
    <!--Sidebar-->
 
    <div class="sidebar">
-             <div class="sidebar-1">
-                 <button class="sidebar-1">
-                    <img class="img-menu" src="Images\Menu.png" height="50px" width="50px">
-                 </button>
-             </div>
-               
+
              <div class="sidebar-btn">               
                   <div class="sidebar-btn1">                 
                          <button class="sidebar-btn1">Tendances
@@ -39,31 +41,89 @@
                          </button> 
                    </div>
              </div>
+             <div class="sidebar-profil">
+                <div class="left-profilbtn">
+                   <a href="inscription.html">
+                     <button class="right-profilbtn">
+                           <p><i class="fa-regular fa-user fa-3x"></i></p>  
+                     </button>
+                   </a>                         
+                </div>
+
+             </div> 
     </div>
     
  <!--Fin Sidebar-->
  <!--Center-->  
  
     <div class="center">
-          <div class="center-research">            
-              <input class="center-research" type="search" placeholder="Rechercher...">              
-          </div>
-          <div class="centerblock-btn">
-             <button class="center-btn">Tagshots</button>
-             <button class="center-btn1">#Hashtags</button>
-          </div>
-          <div class="center-text">
+    
+      <div class="centertags">
+            <div id="Actualité-Flash">
+                  <p>Actualité Flash</p>
+            </div>
+            <div id="Sport">
+                  <p>Sport</p>
+            </div>
+            <div id="Politique">
+                  <p>Politique</p>
+            </div>  
+            <div id="Histoire">
+                  <p>Histoire</p>
+            </div>
+            <div id="Cinéma">
+                  <p>Cinéma</p>
+            </div>
+            <div id="Evenènements">
+                  <p>Evenènements</p>
+            </div>
+            <div id="Musique">
+                  <p>Musique</p>
+            </div>
+            <div id="Géopolitique">
+                  <p>Géopolitique</p>
+            </div>
+            <div id="Santé">
+                  <p>Santé</p>
+            </div>
+            <div id="Environnement">
+                  <p>Environnement</p>
+            </div>                                  
+       </div>  
+
+            <!--Zone de post début-->
+          <div class="centerblock-post">
+             <div>
+                <u><h1 class="center-btn">Tagshots</h1></u>
+             </div>
+             <div class="center-post">
                 <div class="center-text1">
-                     <div class="avatar">
-                         <img src="" alt="">
-                     </div>
                 </div>                     
-          </div>
+             </div>
+            </div>
+            <!--Zone de post Fin-->
+             
+
+               <!--Modal Début-->
+             <div class="modal-container">
+                <div class="overlay modal-trigger">                              
+                </div>
+                    <div class="modal">
+                        <button class="close-modal modal-trigger">X</button>
+                        <h1>Voici du Contenu</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat itaque ipsum fuga, aliquid odio iste.</p>
+                    </div>
+             </div>
+               <!--Modal Fin-->
+                
+
+          <button class="modal-btn modal-trigger fa-2x">+</button>
+      
     </div>
    
     <!--Fin Center-->
  
-    <!--Right-->
+    <!--Right
 
     <div class="right">
        <div class="right-top">
@@ -90,12 +150,17 @@
                <button class="rightbtn-3">Nous Contacter</button>               
              </div>
        </div>
-    </div>
 
-    <!--Fin Right-->
+
+   </div> -->
+
+       <!--Fin Right-->
+
  </div>
 
 
  <script src="https://kit.fontawesome.com/0b4d105291.js" crossorigin="anonymous"></script>
+ <script src="sidebar.js"></script>
+ <script src="center.js"></script>
 </body>
 </html>
