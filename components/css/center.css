@@ -1,57 +1,434 @@
 .center {
  position: relative;
-left: 30%;
-width: 40%;
+left: 22%;
+width: 60%;
 display: flex;
 flex-direction: column;
-background-color: #515151; 
 padding-bottom: 100%;
+border-left: 1px solid rgb(207,207,207);
+border-right: 1px solid rgb(207,207,207);
 }
 
 
-.center-research{
-width: 600px;
- height: 40px;
-margin-left: auto;
-margin-right: auto;
-padding-top: 10px;
-border-radius: 99999px;
-border: none;
-}
 
 
-.centerblock-btn{
+/*Tags*/
+.centertags{
 display: flex;
-justify-content: center;
-padding-top: 10px;
+justify-content: space-around;
+font-family: 'Nunito', sans-serif;
+font-size: 18px;
+font-weight: 600;
+border-bottom: 1px solid rgb(207,207,207);
+
+}
+
+#Actualité-Flash{
+    color: #ffd60a;
+    cursor: pointer;
+}
+
+#Sport{
+    color: #e5383b;
+    cursor: pointer;
+
+}
+
+#Politique{
+    color: #64b5f6;
+    cursor: pointer;
+
+}
+
+#Histoire{
+    color: #f77f00;
+    cursor: pointer;
+}
+
+#Cinéma{
+    color: #b5838d;
+    cursor: pointer;
+
+}
+
+#Evènements{
+    color: #bfd200; 
+    cursor: pointer;
+
+}
+
+#Musique{
+    color: deeppink;
+    cursor: pointer;
+
+}
+
+#Géopolitique{
+color: #d4a276;
+cursor: pointer;
+
+}
+
+#Santé{
+    color: white;
+    cursor: pointer;
+
+}
+
+#Environnement{
+    color: #adc178;
+    cursor: pointer;
+
+}
+
+#clear{
+    border-left: 1px solid rgb(207,207,207);
+    cursor: pointer;
+    padding-left: 8px;
+}
+
+/*Fin Tags*/
+
+.centerblock-post{
+display: flex;
+flex-direction: column;
+}
+
+.center-post{
+
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.center-postcontent{
+    border: 1px solid white;
+    border-radius: 50px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding-top: 1%;
+    padding-bottom: 5%;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.profil{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-id{
+ display: flex;
+ align-items: center;
+ 
+}
+
+.avatar-square{
+    padding-right: 10px;
+}
+
+.avatar{
+    border: 2px solid white;
+    width: 80px;
+    height: 80px;
+    border-radius: 99999px;
+    margin-left: 10px;
+}
+
+
+.username{
+font-size: 30px;
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+}
+
+.text{
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    padding-top: 5px;
+    color: white;
+    text-align: left;
+    min-width: 800px;
+    max-width: 1010px;
+    line-height: 24px;
+}
+
+.hashtag-name{
+    color: #5271FF;
+    text-align: left;
+    padding-top: 2%;
+}
+
+.trash-btn{
+    margin-left: 700px;
+    color: red;
+    cursor: pointer;
+    border: none;
+}
+
+.delete-container{
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 36%;
+    width: 600px;
+    height: 400px;
+    background-color: lightsteelblue;
+    border-radius: 20px;
+
+}
+
+.delete-container-active{
+      display: block;
+      
+}
+
+.delete-adjusment{
+    display: flex;
+    flex-direction: column;
+}
+
+.delete-txt{
+  font-family: 'Nunito', sans-serif;
+  font-size: 40px;
+  padding-top: 10%;
+  padding-bottom: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.delete-btn{
+display: flex;
+align-items: center;
 justify-content: space-around;
 }
 
+.yes-btn{
+  width: 140px;
+  height: 60px;
+  border-radius: 999999px;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: lightgreen;
+}
+
+.no-btn{
+    width: 140px;
+    height: 60px;
+    border-radius: 999999px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #ff365e;
+
+}
+
 .center-btn{
-border-radius: 99999px;
-border: none;
-background-color: #444444;
-width: 70px;
+color: white;
+font-family: 'Nunito', sans-serif;
+font-size: 20px;
+padding-left: 38%;
+
+}
+
+.tagshots{
+    width: 300px;
+}
+
+.center-btn1{
 color: aliceblue;
 }
 
-.center-btn:hover{
-    transition: 1s;
-    color: #5271FF;
-    cursor: pointer;
-}
-
-
-.center-btn1{
-    border-radius: 99999px;
-    border: none;   
-    background-color: #444444;
-    width: 70px;
-    color: aliceblue;
-}
-
 .center-btn1:hover{
-    transition: 1s;
-    color: #5271FF;
-    cursor: pointer;
+transition: 1s;
+color: #5271FF;
+cursor: pointer;
 }
+
+
+/*Bouton modal flottant*/
+
+.modal-btn{
+    padding: 10px 14px;
+    position: fixed;
+    right: 25%;
+    top: 75%;
+    font-size: 18px;
+    border-radius: 100%;
+    margin: 100px auto;
+    display: block;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: solid 1px;
+    color: #5c6b73;
+}
+
+.modal-container{
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 1159px;
+    height: 100vh;
+}
+
+.modal-container.active{
+    display: block;
+}
+
+.overlay{
+position: absolute;
+width: 100%;
+height: 100%;
+background: #333333d3;
+
+}
+
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 700px;
+    min-width: 300px;
+    background: lightsteelblue;
+    border-radius: 5px;
+    padding: 2%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-modal{
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: #ff365e;
+    color: #fff;
+}
+
+.selector{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2%;
+}
+
+.post-text{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Nunito', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#textarea{
+    background-color: white;
+    height: 125px;
+    color: black;
+    padding: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+}
+
+.modal h1{
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+.modal p{
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.btn-post{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.cancel-btn{
+cursor: pointer;
+}
+
+.publish-btn{
+cursor: pointer;
+}
+
+/*Fin modal*/
+
+
+/*Inscrit toi !*/
+.inscription-container{
+  display: none;
+    position: fixed;
+    top: 0;
+    width: 1159px;
+    height: 100vh;
+}
+
+.inscription-container-active{
+    display: block;
+}
+
+.inscription-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#333333d3;
+    backdrop-filter: blur(10px);
+    
+}
+
+.inscription-block{
+display: flex;
+position: fixed;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+width: 400px;
+height: 200px;
+background-color: lightsteelblue;
+margin-left: 18%;
+margin-right: auto;
+margin-top: 14%;
+}
+
+.inscription-txt{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
+}
+
+.container-btn{
+display: flex;
+justify-content: space-around;
+width: 100%;
+}
+
+.connexion-btn{
+width: 100px;
+height: 50px;
+background-color: white;
+color: black;
+border-radius: 20px;
+cursor: pointer;
+}
+
+.inscription-btn{
+width: 100px;
+height: 50px;
+background-color: white;
+color: black;
+border-radius: 20px;
+cursor: pointer;
+}
+/*Inscrit-toi ! Fin*/

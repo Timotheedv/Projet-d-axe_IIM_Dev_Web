@@ -1,0 +1,38 @@
+/*.main-container1{
+padding-bottom: 560px;
+padding-top: 20%;
+padding-left: 2%;
+background-color: #444444
+}
+
+.btn{
+    height: 35px;
+    width: 277px;
+    margin-right: 27px;
+    margin-top: 5px;
+}
+
+.creation-compte{
+   padding-left: 20%;
+   margin-top: 10px;
+}*/
+
+.inblock{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #5c6b73;
+
+
+}
+
+.insize{
+width: 30%;
+padding: 4%;
+margin-top: 8%;
+margin-left: 40%;
+border: solid 2px;
+border-radius: 50px;
+color: white;
+}

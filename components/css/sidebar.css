@@ -1,8 +1,17 @@
 .sidebar{
     position: fixed;
+
     padding-bottom: 100%;    
-    width:30%;
+    width:20%;
+    margin-top: 5%;
 }
+
+.sidebar-hamburger{
+position: fixed;
+}
+
+
+
 
 .sidebar-btn{
  height: 130px; 
@@ -11,19 +20,22 @@
  justify-content: space-between;
  margin-top: 5%;
  padding: 10%;
- margin-left: 30%;
+ margin-left: 20%;
+
 }
 
-.sidebar-1{
-margin-left: 55%;
-margin-top: 5%;
-border: none;
-background-color: #444444;
-}
 
-.sidebar-1:hover{
-    cursor: pointer;
-}
+.sidebar-menu{
+
+     border: none;
+     cursor: pointer;
+     color: aliceblue;
+     margin-left: 80%;
+     margin-top: 30px;
+    }
+
+
+
 
 
 
@@ -35,8 +47,8 @@ background-color: #444444;
     border-radius: 99999px;
     border: none;   
     background-color: seashell; 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
 }
 
 .sidebar-btn1:hover{
@@ -52,7 +64,8 @@ background-color: #444444;
     border-radius: 99999px;
     border: none;
     background-color: seashell;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
 }
 
 .sidebar-btn2:hover{
@@ -67,7 +80,8 @@ background-color: #444444;
     border-radius: 99999px;
     border: none;
     background-color: seashell;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
  
 }
 
@@ -76,6 +90,22 @@ background-color: #444444;
      transition: 1s;
      cursor: pointer;
  }
+
+.sidebar-profil{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 300px;
+}
+ .left-profilbtn{
+
+    border: none;
+    cursor: pointer;
+    color: aliceblue;
+    padding-left: 50%;
+}
+
+
 
 /*:Hover*/
 

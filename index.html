@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="components\style.css"/>       
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="components\style.css"/> 
     <title>Document</title>
 </head>
 
@@ -13,11 +15,6 @@
 <body>
 
  <div class="main-container">
- <div class="sidebar-hamburger">
-      <button class="sidebar-menu">
-            <i class="fa-solid fa-bars fa-4x"></i>
-      </button>
-    </div> 
 
    <!--Main container-->
 
@@ -29,28 +26,21 @@
 
              <div class="sidebar-btn">               
                   <div class="sidebar-btn1">                 
-                         <button class="sidebar-btn1">Tendances
+                         <button class="sidebar-btn1">Profil
                          </button> 
                   </div>
                   <div class="sidebar-btn2">
-                         <button class="sidebar-btn2">Politique de confidentialité
-                         </button> 
+                        <button class="sidebar-btn2">Se connecter
+                         </button>
                    </div>
                    <div class="sidebar-btn3">
-                         <button class="sidebar-btn3">Paramètre
+                      <a href="inscription.html"> 
+                         <button class="sidebar-btn3">Création Compte
                          </button> 
+                      </a> 
                    </div>
              </div>
-             <div class="sidebar-profil">
-                <div class="left-profilbtn">
-                   <a href="inscription.html">
-                     <button class="right-profilbtn">
-                           <p><i class="fa-regular fa-user fa-3x"></i></p>  
-                     </button>
-                   </a>                         
-                </div>
 
-             </div> 
     </div>
     
  <!--Fin Sidebar-->
@@ -74,7 +64,7 @@
             <div id="Cinéma">
                   <p>Cinéma</p>
             </div>
-            <div id="Evenènements">
+            <div id="Evènements">
                   <p>Evenènements</p>
             </div>
             <div id="Musique">
@@ -88,21 +78,69 @@
             </div>
             <div id="Environnement">
                   <p>Environnement</p>
-            </div>                                  
+            </div> 
+
+         <div id="clear">
+            <p>Clear</p>
+         </div>
        </div>  
 
             <!--Zone de post début-->
-          <div class="centerblock-post">
+       <div class="centerblock-post">
              <div>
-                <u><h1 class="center-btn">Tagshots</h1></u>
+                <div class="center-btn">
+                  <img  class="tagshots" src="Images\TagShots (2).png" alt="">
+                </div>
              </div>
-             <div class="center-post">
-                <div class="center-text1">
-                </div>                     
-             </div>
-            </div>
-            <!--Zone de post Fin-->
              
+             <div class="center-post">
+                 <div class="center-postcontent">
+                          <div class="profil">
+                              <div class="user-id">
+                                   <div class="avatar-square">
+                                    <img class="avatar" src="Images\profil.jpg" alt="logo">                                  
+                                   </div> 
+                                   <div class="username">Tim21                                   
+                                   </div>
+                                   <div class="trash">
+                                     <div class="trash-btn">
+                                    <p><i class="fa-solid fa-trash-can fa-2x"></i></p>
+                                     </div>                            
+                                   </div>
+                              </div>                         
+                          </div>
+                          <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit modi aspernatur accusantium consectetur dolore repellat ab placeat tempora nesciunt hic possimus eum dolor error perspiciatis, quaerat commodi non mollitia corporis eligendi beatae architecto est voluptatibus rem assumenda. Explicabo laboriosam assumenda incidunt nesciunt! Veritatis, sit incidunt amet omnis cupiditate dolores? Veniam, dolore. Dolorum cum, sequi ratione aliquid nemo alias necessitatibus, debitis similique optio hic ipsum sint qui incidunt a quis ullam explicabo praesentium quisquam, in dicta libero itaque. Culpa aut reiciendis obcaecati, magni atque, tempora recusandae esse, error nobis deserunt iure est eaque ipsam. Optio adipisci mollitia ipsum dolor architecto dignissimos nemo ducimus temporibus? Quaerat voluptatem, ex numquam quos eveniet provident.
+                          </div>
+                          <div class="hashtag-name">#Sport                       
+                          </div>
+                 </div>               
+                 
+                 
+
+             </div>
+       </div>
+            <!--Zone de post Fin-->
+            <!--Bouton de suppression--> 
+
+            <div class="delete-container">
+              <div class="delete-adjusment">
+                   <div class="delete-txt">Voulez-vous vraiment supprimer le post ?
+                   </div>
+                <div class="delete-btn">
+                    <div class="yes">
+                        <button class="yes-btn">Oui</button>
+                    </div>
+                   <div class="no">
+                        <button class="no-btn">Non</button>
+                   </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Fin bouton de suppression-->
+
+
+
 
                <!--Modal Début-->
              <div class="modal-container">
@@ -110,17 +148,62 @@
                 </div>
                     <div class="modal">
                         <button class="close-modal modal-trigger">X</button>
-                        <h1>Voici du Contenu</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat itaque ipsum fuga, aliquid odio iste.</p>
+                        <div class="selector">
+                              <select name="hashtag-name" id="selector">
+                                    <option selected disabled>TAGS</option>
+                                    <option value="Actualité Flash">Actualité Flash</option>
+                                    <option value="Sport">Sport</option>
+                                    <option value="Politique">Politique</option>
+                                    <option value="Histoire">Histoire</option>
+                                    <option value="Cinéma">Cinéma</option>
+                                    <option value="Evenènements">Evenènements</option>
+                                    <option value="Musique">Musique</option>
+                                    <option value="Géopolitique">Géopolitique</option>
+                                    <option value="Santé">Santé</option>
+                                    <option value="Environnement">Environnement</option>
+                              </select>
+                        </div>
+                          <div class="post-text">
+                               <textarea name="textarea" id="textarea" cols="60" rows="10" ></textarea>
+                          </div>
+                          <div class="btn-post">
+                              <div class="cancel">
+                                    <button class="cancel-btn">Supprimer</button>
+                              </div>
+                              <div class="publish">
+                                    <button class="publish-btn">Publier</button>
+                              </div>
+                          </div>
                     </div>
              </div>
                <!--Modal Fin-->
                 
 
-          <button class="modal-btn modal-trigger fa-2x">+</button>
+               <!--Inscris-toi ! -->
+             <div class="inscription-container">
+                  <div class="inscription-overlay">
+                  </div>
+                <div class="inscription-block">     
+                    <div class="inscription-txt">Pour continuer : 
+                    </div>
+                    <div class="container-btn">
+                        <div class="connexion">
+                            <button class="connexion-btn">Me Connecter</button>
+                        </div>
+                       <div class="inscription">
+                            <button class="inscription-btn">Je m'inscris</button>
+                       </div>
+                    </div>
+                 </div> 
+             </div>
+                
+
+              
+            <!--Inscris-toi Fin -->
+
+          <button class="modal-btn modal-trigger fa-4x">+</button>
       
     </div>
-   
     <!--Fin Center-->
  
     <!--Right
@@ -157,7 +240,6 @@
        <!--Fin Right-->
 
  </div>
-
 
  <script src="https://kit.fontawesome.com/0b4d105291.js" crossorigin="anonymous"></script>
  <script src="sidebar.js"></script>
