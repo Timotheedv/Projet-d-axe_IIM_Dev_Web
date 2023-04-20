@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,23 +14,29 @@
 </head>
 
 <body>
-        <?php require_once "connexion.php"; 
+    <?php require_once "connexion.php";
 
-        $requete = $database->prepare("SELECT publi_id, tagshot, tag, image, date, pseudo FROM `publication` INNER JOIN users on publication.user = users.id  ORDER BY date DESC");
-        // prepare = preparer la demande de donnée//
-        $requete->execute();
-        //excecute = excuter requete et recuperer//
+    if (isset($_SESSION['id'])) {
+        $data = [
+            "id" => $_SESSION["id"],
+        ];
+        $query = $database->prepare("SELECT publi_id, pseudo, tagshot, tag, image, date  FROM `publication` INNER JOIN users ON publication.user = users.id WHERE users.id= :id ORDER BY date DESC;");
         
-        $tweets = $requete->fetchAll(PDO::FETCH_ASSOC);
-        //fetchAll = transforme la réponse en qq chose de comprehensible pour le code(tableaux)//
+        $query->execute($data);
 
-        $profil = $database->prepare("SELECT pseudo FROM `users` WHERE ");
+        $tweets = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        $query = $database->prepare("SELECT avatar FROM `users` WHERE users.id= :id");
         
-        $profil->execute();
+        $query->execute($data);
 
-        $profil = $requete->fetchAll(PDO::FETCH_ASSOC);
+        $profil = $query->fetchAll(PDO::FETCH_ASSOC);
 
-        ?>
+    }
+
+
+
+    ?>
 
 
 
@@ -42,9 +48,9 @@
             <div class="block-info">
                 <div class="profil-info"></div>
                 <div>
-                    <img class="profil-avatar" src="assets\Images\profil.jpg" alt="avatar">
+                    <img class="profil-avatar" src="<?php echo $profil[0]["avatar"] ?>" alt="avatar"><!-- [0]pour afficher la première ligne du tableau-->
                 </div>
-                <div class="profil-pseudo"<?php echo $profil["pseudo"]?>>
+                <div class="profil-pseudo"> <?php echo $_SESSION["pseudo"] ?>
                 </div>
             </div>
             <br><br><br><br>
@@ -53,54 +59,54 @@
                 dicta dolores rerum.
             </div>
         </div>
-    
-
-    <?php
 
 
-    
-    foreach ($tweets as $tweet) { ?>
+        <?php
 
-        <div class="center-postcontent">
-            <div class="profil">
-                <div class="user-id">
-                    <div class="avatar-square">
-                        <img class="avatar" src="Images\profil.jpg" alt="logo">
-                    </div>
-                    <div class="username">
-                        <?php echo $tweet["pseudo"] ?>
-                    </div>
-                    <div class="trash">
-                        <div class="trash-btn">
-                            <p><i class="fa-solid fa-trash-can fa-2x"></i>
-                            </p>
-                            </a>
+
+
+        foreach ($tweets as $tweet) { ?>
+
+            <div class="center-postcontent">
+                <div class="profil">
+                    <div class="user-id">
+                        <div class="avatar-square">
+                            <img class="avatar" src="<?php echo $profil[0]["avatar"] ?>" alt="logo">
+                        </div>
+                        <div class="username">
+                            <?php echo $tweet["pseudo"] ?>
+                        </div>
+                        <div class="trash">
+                            <div class="trash-btn">
+                                <p><i class="fa-solid fa-trash-can fa-2x"></i>
+                                </p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="text">
-                <?php echo $tweet["tagshot"] ?>
-            </div>
-            <div class="tag">
-                <?php echo $tweet["tag"] ?>
-            </div>
-
-            <?php if (isset($tweet["image"])) {
-
-                ?>
-                <div class="image">
-                    <img src="<?php echo $tweet["image"] ?>" style="width: 350px;height:200px;">
+                <div class="text">
+                    <?php echo $tweet["tagshot"] ?>
                 </div>
-            <?php } ?>
-        </div>
-        <div class="date">
-            <?php echo $tweet["date"] ?>
-        </div>
-    <?php } ?>
+                <div class="tag">
+                    <?php echo $tweet["tag"] ?>
+                </div>
+
+                <?php if (isset($tweet["image"])) {
+
+                    ?>
+                    <div class="image">
+                        <img src="<?php echo $tweet["image"] ?>" style="width: 350px;height:200px;">
+                    </div>
+                <?php } ?>
             </div>
-             </div>
-        </div>
+            <div class="date">
+                <?php echo $tweet["date"] ?>
+            </div>
+        <?php } ?>
+    </div>
+    </div>
+    </div>
     </div>
 
 </body>

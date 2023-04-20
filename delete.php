@@ -6,7 +6,7 @@
          "id" => $_GET["id"],
         ];
 
-        $requete = $database->prepare("DELETE FROM publication WHERE id= :id");
+        $requete = $database->prepare("DELETE FROM publication WHERE publi_id= :id");
         $requete->execute($data);
 
         if($requete) {

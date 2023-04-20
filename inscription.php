@@ -94,6 +94,10 @@
         </label>
       </div>-->
     </div>
+    <div class="col-sm-10 my-1">
+    <label for="image">Insérer image</label>   <br>  
+          <input type="url" name="image" id="avatar" placeholder="Image Profil">
+    </div>
     <div class="col-auto my-1">
       <button type="submit" name="signup-btn" class="btn btn-primary">Submit</button>
     </div>

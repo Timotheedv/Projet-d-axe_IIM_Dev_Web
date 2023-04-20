@@ -78,25 +78,25 @@
                               <div id="politique">
                                     <p>Politique</p>
                               </div>
-                              <div id="Histoire">
+                              <div id="histoire">
                                     <p>Histoire</p>
                               </div>
                               <div id="Cinema">
                                     <p>Cinéma</p>
                               </div>
-                              <div id="Evenements">
+                              <div id="evenements">
                                     <p>Evenènements</p>
                               </div>
-                              <div id="Musique">
+                              <div id="musique">
                                     <p>Musique</p>
                               </div>
-                              <div id="Geopolitique">
+                              <div id="geopolitique">
                                     <p>Géopolitique</p>
                               </div>
-                              <div id="Sante">
+                              <div id="sante">
                                     <p>Santé</p>
                               </div>
-                              <div id="Environnement">
+                              <div id="environnement">
                                     <p>Environnement</p>
                               </div>
 
@@ -139,7 +139,7 @@
                                                                   <?php echo $tweet["pseudo"] ?>
                                                                   <?php echo $tweet["publi_id"] ?>
                                                             </div>
-                                                            <div class="trash">   
+                                                            <div class="trash"> 
                                                                   <div class="trash-btn">
                                                                         <p><i class="fa-solid fa-trash-can fa-2x"></i>
                                                                         </p>
@@ -171,7 +171,7 @@
 
                            <!--Bouton de suppression-->
 
-
+                  <?php  if(isset($_SESSION['isConnected'])|| $_SESSION['isConnected'] == true) {?>
                         <div class="delete-container">
                               <div class="delete-adjusment">
                                     <div class="delete-txt">Voulez-vous vraiment supprimer le post ?
@@ -190,7 +190,7 @@
                                     </div>
                               </div>
                         </div>
-                        <?php } ?>
+                  <?php } };?>
                               </div>
                         </div>
                         

@@ -6,9 +6,10 @@
             "pseudo" => $_POST["pseudo"],
             "mail" => $_POST["mail"],
             "password" => password_hash($_POST["password"], PASSWORD_DEFAULT),
+            "avatar" => $_POST["avatar"],
         ];
 
-        $requete = $database->prepare("INSERT INTO users (pseudo, mail, password) VALUES (:pseudo, :mail, :password)");
+        $requete = $database->prepare("INSERT INTO users (pseudo, mail, password, avatar) VALUES (:pseudo, :mail, :password, :avatar)");
         $requete->execute($data); 
 
         if($requete) {
