@@ -81,7 +81,7 @@
                               <div id="histoire">
                                     <p>Histoire</p>
                               </div>
-                              <div id="Cinema">
+                              <div id="cinema">
                                     <p>Cinéma</p>
                               </div>
                               <div id="evenements">
