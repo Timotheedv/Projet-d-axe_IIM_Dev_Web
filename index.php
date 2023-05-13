@@ -70,13 +70,14 @@
 
                         <div class="centertags">
                               <div id="actualite-flash">
-                                    <p>Actualité Flash</p>
+                                          <p>Actualité Flash</p>
                               </div>
+                              
                               <div id="sport">
-                                    <p>Sport</p>
+                                          <p>Sport</p>
                               </div>
                               <div id="politique">
-                                    <p>Politique</p>
+                                          <p>Politique</p>
                               </div>
                               <div id="histoire">
                                     <p>Histoire</p>
@@ -101,7 +102,9 @@
                               </div>
 
                               <div id="clear">
-                                    <p>Clear</p>
+                                    <a href="index.php">
+                                          <p>Clear</p>
+                                     </a>
                               </div>
                         </div>
 
@@ -109,7 +112,7 @@
                         <div class="centerblock-post">
                               <div>
                                     <div class="center-btn">
-                                          <img class="tagshots" src="Images\TagShots (2).png" alt="">
+                                          <img class="tagshots" src="assets\Images\TagShots (2).png" alt="">
                                     </div>
                               </div>
 
@@ -117,11 +120,13 @@
                                     <?php
                                     require_once 'connexion.php';
 
-                                    $requete = $database->prepare("SELECT publication.publi_id, tagshot, tag, image, date, pseudo FROM `publication` INNER JOIN users on publication.user = users.id ORDER BY date DESC");
-                                    // prepare = preparer la demande de donnée//
+
+
+                                    $requete = $database->prepare("SELECT publication.publi_id, tagshot, tag, image, date, pseudo, avatar FROM `publication` INNER JOIN users on publication.user = users.id ORDER BY date DESC");
+                                          // prepare = preparer la demande de donnée//
                                     $requete->execute();
-                                    //excecute = excuter requete et recuperer//
-                                    
+                                          //excecute = excuter requete et recuperer//
+                                
                                     $tweets = $requete->fetchAll(PDO::FETCH_ASSOC);
                                     //fetchAll = transforme la réponse en qq chose de comprehensible pour le code(tableaux)//
                                     
@@ -133,7 +138,7 @@
                                                 <div class="profil">
                                                       <div class="user-id">
                                                             <div class="avatar-square">
-                                                                  <img class="avatar" src="Images\profil.jpg" alt="logo">
+                                                                  <img class="avatar" src="<?php echo $tweet["avatar"] ?>" alt="logo">
                                                             </div>
                                                             <div class="username">
                                                                   <?php echo $tweet["pseudo"] ?>
@@ -163,15 +168,15 @@
                                                             <img src="<?php echo $tweet["image"] ?>" style="width: 350px;height:200px;">
                                                       </div>
                                                 <?php } ?>
-                                          </div>
-                                          <div class="date">
-                                                <?php echo $tweet["date"] ?>        
-                                          </div>
-                                    
+
+                                                      <div class="date">
+                                                            <?php echo $tweet["date"] ?>        
+                                                      </div>
+                                                </div>
 
                            <!--Bouton de suppression-->
 
-                  <?php  if(isset($_SESSION['isConnected'])|| $_SESSION['isConnected'] == true) {?>
+                  <?php  if(isset($_SESSION['isConnected']) && $_SESSION['isConnected'] == true) {?>
                         <div class="delete-container">
                               <div class="delete-adjusment">
                                     <div class="delete-txt">Voulez-vous vraiment supprimer le post ?
@@ -286,8 +291,27 @@
 
                         <!--Inscris-toi Fin -->
 
-                        <button class="modal-btn modal-trigger fa-4x">+</button>
+                        <button class="modal-btn modal-trigger fa-4x" id="modal-btn">+</button>
                   </div>
+                 
+                  <div class="responsive-btn">
+                        <div class="burger">
+                              <p>
+                                    <i class="fa-solid fa-bars"></i>
+                              </p>
+                        </div>
+                        <div class="responsive-post">  
+                              <p>
+                                     <i class="fa-solid fa-plus" id="responsive-btn"></i>
+                              </p> 
+                        </div>
+                        <div class="responsive-tags">
+                              <p>
+                                     <i class="fa-regular fa-hashtag"></i>
+                              </p>
+                        </div>
+                  </div>
+            
             </div>
             <!--Fin Center-->
 
@@ -327,7 +351,7 @@
       </div>
 
       <script src="https://kit.fontawesome.com/0b4d105291.js" crossorigin="anonymous"></script>
-      <script src="sidebar.js"></script>
+      <script src="assets\sidebar.js"></script>
       <script src="assets\center.js"></script>
 </body>
 
