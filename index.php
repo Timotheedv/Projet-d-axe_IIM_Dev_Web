@@ -9,7 +9,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="assets\components\style.css" />
-      <title>Document</title>
+      <title>d</title>
 </head>
 
 
@@ -214,10 +214,10 @@
 
                         <!--Modal Début-->
                         <div class="modal-container">
-                              <div class="overlay modal-trigger">
+                              <div class="overlay modal-trigger" id="overlay">
                               </div>
                               <div class="modal">
-                                    <button class="close-modal modal-trigger">X</button>
+                                    <button class="close-modal modal-trigger" id="close-modal">X</button>
 
 
                                     <form action="createtweet.php" method="POST">
