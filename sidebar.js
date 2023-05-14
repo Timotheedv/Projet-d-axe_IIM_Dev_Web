@@ -1,11 +1,11 @@
 
-/*Sidebar pour mobile
+/*Sidebar pour mobile*/
 
-const hamburgerButton= document.querySelector (".sidebar-menu")
+const hamburgerButton= document.querySelector (".burger")
 const buttons = document.querySelector (".sidebar")
 
  
-console.log("button");
+console.log("buttons");
 
 hamburgerButton.addEventListener("click", function (){
 
@@ -18,7 +18,7 @@ hamburgerButton.addEventListener("click", function (){
    }
 
 })
-*/
+
 
 
 
