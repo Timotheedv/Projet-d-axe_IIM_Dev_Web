@@ -1,12 +1,13 @@
 .center {
  position: relative;
 left: 22%;
-width: 60%;
+width: 70%;
 display: flex;
 flex-direction: column;
 padding-bottom: 100%;
 border-left: 1px solid rgb(207,207,207);
 border-right: 1px solid rgb(207,207,207);
+
 }
 
 
@@ -15,67 +16,73 @@ border-right: 1px solid rgb(207,207,207);
 /*Tags*/
 .centertags{
 display: flex;
-justify-content: space-around;
+justify-content: space-evenly;
 font-family: 'Nunito', sans-serif;
 font-size: 18px;
 font-weight: 600;
 border-bottom: 1px solid rgb(207,207,207);
-
+position: fixed;
+width: 100%;
+background-color: #83a7b9;
+right: 2px;
+top: 0;
 }
 
-#Actualité-Flash{
+#actualite-flash{
     color: #ffd60a;
     cursor: pointer;
 }
 
-#Sport{
+
+
+#sport{
     color: #e5383b;
     cursor: pointer;
 
 }
 
-#Politique{
-    color: #64b5f6;
+#politique{
+    color: #259dff;
     cursor: pointer;
 
 }
 
-#Histoire{
+#histoire{
     color: #f77f00;
     cursor: pointer;
 }
 
-#Cinéma{
+#cinema{
     color: #b5838d;
     cursor: pointer;
 
 }
 
-#Evènements{
+#evenements{
     color: #bfd200; 
     cursor: pointer;
 
 }
 
-#Musique{
-    color: deeppink;
+#musique{
+    color: #ff1493;
     cursor: pointer;
 
 }
 
-#Géopolitique{
+#geopolitique{
 color: #d4a276;
 cursor: pointer;
 
 }
 
-#Santé{
+#sante{
     color: white;
     cursor: pointer;
 
 }
 
-#Environnement{
+#environnement{
     color: #adc178;
     cursor: pointer;
 
@@ -113,6 +120,7 @@ flex-direction: column;
     padding-left: 6%;
     padding-right: 6%;
 }
+
 
 .profil{
     display: flex;
@@ -156,10 +164,10 @@ color: white;
     line-height: 24px;
 }
 
-.hashtag-name{
-    color: #5271FF;
+.tag{
+    color: black;
     text-align: left;
-    padding-top: 2%;
+    padding-top: 2%; 
 }
 
 .trash-btn{
@@ -231,7 +239,7 @@ color: white;
 font-family: 'Nunito', sans-serif;
 font-size: 20px;
 padding-left: 38%;
-
+margin-top: 6%;
 }
 
 .tagshots{
@@ -281,7 +289,7 @@ cursor: pointer;
 
 .overlay{
 position: absolute;
-width: 100%;
+width: 1108px;
 height: 100%;
 background: #333333d3;
 
@@ -324,7 +332,7 @@ background: #333333d3;
 
 .post-text{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     font-family: 'Nunito', sans-serif;
     margin-left: auto;
     margin-right: auto;
@@ -337,6 +345,7 @@ background: #333333d3;
     padding: 5%;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 15px;
+
 }
 
 .modal h1{
@@ -382,7 +391,7 @@ cursor: pointer;
 
 .inscription-overlay{
     position: absolute;
-    width: 100%;
+    width:1430px;
     height: 100%;
     background:#333333d3;
     backdrop-filter: blur(10px);
@@ -398,8 +407,8 @@ align-items: center;
 width: 400px;
 height: 200px;
 background-color: lightsteelblue;
-margin-left: 18%;
-margin-right: auto;
+margin-left: 26%;
+
 margin-top: 14%;
 }
 
@@ -414,16 +423,9 @@ justify-content: space-around;
 width: 100%;
 }
 
-.connexion-btn{
-width: 100px;
-height: 50px;
-background-color: white;
-color: black;
-border-radius: 20px;
-cursor: pointer;
-}
 
-.inscription-btn{
+
+.modalconnexion-btn {
 width: 100px;
 height: 50px;
 background-color: white;
@@ -432,3 +434,174 @@ border-radius: 20px;
 cursor: pointer;
 }
 /*Inscrit-toi ! Fin*/
+
+
+/*Responsive-mobile*/
+.responsive-btn{
+display: none;
+}
+
+
+
+/*Responsive*/
+    @media screen  and (max-width: 1660px){
+        .sidebar-btn1 {
+        width: 175px;
+    
+        }
+        
+    .trash-btn{
+    margin-left: 600px;
+    }   
+        }
+
+
+    
+    
+        @media screen and (max-width: 1260px){
+    .sidebar-btn1{
+        width: 125px;
+        font-size: 12px;
+        height: 30px;
+    }
+    .sidebar-btn{
+        margin-left: 14%;
+    }     
+    
+    .centertags{
+        font-size: 14px;
+    }
+    
+    .trash-btn{
+        margin-left: 400px;
+        }   
+        .avatar{
+        width: 70px;
+        height: 70px;
+        }
+        .username{
+            font-size: 25px
+        }
+         
+        .modal-btn{
+            padding: 10px 14px;
+            position: fixed;
+            right: 22%;
+            top: 70%;
+            font-size: 16px;
+            border-radius: 100%;
+            margin: 100px auto;
+            display: block;
+            width: 100px;
+            height: 100px;
+                
+        }
+
+        .modal-container{
+            display: none;
+            position: fixed;
+            top: 0;
+            width: 750px;
+            height: 100vh;
+
+        }
+
+
+        .modal{
+            width: 75%;
+
+        }
+
+
+
+        }
+
+        @media screen and (max-width: 985px){
+            .trash-btn{
+                margin-left: 350px;
+                 }   
+
+            .sidebar-btn1{
+                width: 115px;
+                height: 25px;
+                font-size: 12px;
+                        
+            }
+            .avatar{
+                width: 55px;
+                height: 55px;
+             }
+             .username{
+                font-size: 20px
+            }
+
+            .modal-btn{
+              right: 18%;  
+            }
+
+        .modal{
+            width: 50%;
+            
+        }
+    
+        }
+
+        @media screen and (max-width: 810px){
+            .responsive-btn{
+                display: flex;
+                position: sticky;
+                bottom: 0%;
+                justify-content: space-around;
+                background-color: #83a7b9;
+                z-index: 1;
+            }
+
+            .sidebar{
+                transform: translateX(-500px);
+            }
+
+            .sidebar-active{
+                transform: translateX(0px);
+                left: 0%;
+                width: 100%;
+                transition: 0.5s;
+                z-index: 1;
+            }
+            
+
+            .sidebar-btn{
+                height: 105px;
+            }
+
+
+            .sidebar-btn1{
+                width: 400px;
+                font-size: 12px;
+                height: 40px;
+
+            }
+
+
+            .center{
+                width: 100%;
+                left: 0%;
+                margin: 0%;
+            }
+
+            .trash-btn{
+                margin-left: 325px;
+
+            }
+
+            .burger{
+                cursor: pointer;
+            }
+            #modal-btn {
+                display: none;
+            }
+
+            
+        }
+        
+      
+        
