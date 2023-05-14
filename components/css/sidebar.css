@@ -1,14 +1,15 @@
 .sidebar{
     position: fixed;
+    background-color:#83a7b9; 
 
     padding-bottom: 100%;    
     width:20%;
     margin-top: 5%;
 }
 
-.sidebar-hamburger{
-position: fixed;
-}
+
+
+
 
 
 
@@ -51,45 +52,8 @@ position: fixed;
     font-size: 18px;
 }
 
-.sidebar-btn1:hover{
-   background-color: #5271FF;
-    transition: 1s;
-    cursor: pointer;
 
-}
 
-.sidebar-btn2{
-    width: 240px;
-    height: 35px;
-    border-radius: 99999px;
-    border: none;
-    background-color: seashell;
-    font-family: 'Nunito', sans-serif;
-    font-size: 18px;
-}
-
-.sidebar-btn2:hover{
-    background-color: #5271FF;
-     transition: 1s;
-     cursor: pointer;
- }
-
-.sidebar-btn3{
-    width: 240px;
-    height: 35px;
-    border-radius: 99999px;
-    border: none;
-    background-color: seashell;
-    font-family: 'Nunito', sans-serif;
-    font-size: 18px;
- 
-}
-
-.sidebar-btn3:hover{
-    background-color: #5271FF;
-     transition: 1s;
-     cursor: pointer;
- }
 
 .sidebar-profil{
     display: flex;
@@ -107,5 +71,7 @@ position: fixed;
 
 
 
-/*:Hover*/
+/*Responsive*/
+
+
 
