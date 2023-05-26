@@ -1,0 +1,59 @@
+
+
+.inblock{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #83a7b9;
+
+
+}
+
+.insize{
+width: 30%;
+padding: 4%;
+margin-top: 2%;
+margin-left: 36%;
+border: solid 2px;
+border-radius: 50px;
+color: white;
+}
+
+
+
+
+@media screen and (max-width: 1010px){
+
+
+    #square{
+        width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 15%;
+    }
+    #tagshot{
+        margin-left: 0%;
+    }
+    
+    
+}
+
+@media screen and (max-width: 810px){
+
+
+    #square{
+        width: 250px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 15%;
+    }
+
+    
+    #tagshot{
+        margin-left: 0%;
+    }
+    
+}
+
+

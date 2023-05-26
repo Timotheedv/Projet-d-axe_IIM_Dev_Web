@@ -1,0 +1,11 @@
+.main-container {
+    background-color:#83a7b9; 
+    width: 100%;
+    position: absolute;
+}
+
+.container{
+        display: flex;  
+        flex-direction: column; 
+    }
+

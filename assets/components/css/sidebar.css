@@ -1,0 +1,84 @@
+.sidebar{
+    position: fixed;
+    background-color:#83a7b9; 
+    top: 20%;
+    padding-bottom: 100%;    
+    width:20%;
+    margin-top: 0%;
+}
+
+
+
+
+
+
+
+
+.sidebar-btn{
+ height: 130px; 
+ display: flex;
+ flex-direction: column;    
+ justify-content: space-between;
+ margin-top: 5%;
+ padding: 10%;
+ margin-left: 20%;
+
+}
+
+
+.sidebar-menu{
+
+     border: none;
+     cursor: pointer;
+     color: aliceblue;
+     margin-left: 80%;
+     margin-top: 30px;
+    }
+
+
+
+
+
+
+/*Boutons*/
+
+.sidebar-btn1{
+    width: 240px;
+    height: 35px;
+    border-radius: 99999px;
+    border: none;   
+    background-color: seashell; 
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+}
+
+
+
+
+.sidebar-profil{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 300px;
+}
+ .left-profilbtn{
+
+    border: none;
+    cursor: pointer;
+    color: aliceblue;
+    padding-left: 50%;
+}
+
+#sidebar-profil-active{
+    transform: translateX(0px);
+    left: 0%;
+    width: 100%;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+/*Profil*/
+
+
+
+
