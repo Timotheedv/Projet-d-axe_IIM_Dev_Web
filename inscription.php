@@ -13,57 +13,14 @@
 
 <?php require_once "connexion.php" ?>
 
-<div class="sidebar">
 
-<div class="sidebar-btn">
-      <div class="sidebar-btn1">
-            <a href="assets/profil.php">
-                  <button class="sidebar-btn1">Profil
-                  </button>
-            </a>
-      </div>
-      <div class="sidebar-btn2">
-            <a href="login.php">
-                  <button class="sidebar-btn2">Se connecter
-                  </button>
-            </a>
-      </div>
-      <div class="sidebar-btn3">
-            <a href="inscription.php">
-                  <button class="sidebar-btn3">Création Compte
-                  </button>
-            </a>
-      </div>
-</div>
 
-</div>
-  <!--
- <div class="main-container1">
-     <form>
-      <div class="row align-items-center">
-        <div class="row flex-column align-items-center">
-             <div class="col col-sm-2">            
-                <label for="email">E-mail</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            </div>
-             <div class="col-sm-2">
-                <label for="password">Mot de Passe</label>
-                  <input type="text" class="form-control" placeholder="Mot de Passe">
-              </div>
-              <div class="btn">
-                <button type="button" class="btn btn-primary btn-sm">Se connecter</button>
-              </div>
-              <div>
-                <nav> <a class="creation-compte" href="">Création compte</a></nav>
-              </div>
-         </div>
-       </div> 
-     </form>
-  </div>      
--->
 
 <div class="inblock">
-<div class="insize">
+<div class="center-btn">
+      <img class="tagshots" id="tagshot" src="assets\Images\TagShots (2).png" alt="">
+</div>
+<div class="insize" id="square">
 <form action="signup.php" method="POST">
   <div class="form-row align-items-center">
     <div class="col-sm-10 my-1">
@@ -79,24 +36,14 @@
         <input type="text" class="form-control"  name="mail" id="mail" placeholder="Username">
       </div>
     </div>
-    <div class="col-sm-10" >
+    <div class="col-sm-8 col-sm-10" >
       <label for="inputPassword6">Password</label>
       <input type="password" name="password" id="password" class="form-control mx-sm-0" aria-describedby="passwordHelpInline" placeholder="Password">
-      <!--<small id="passwordHelpInline" class="text-muted">
-        Must be 8-20 characters long.
-      </small>
-    </div>
-    <div class="col-auto my-1">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
-        <label class="form-check-label" for="autoSizingCheck2">
-          Remember me
-        </label>
-      </div>-->
+      
     </div>
     <div class="col-sm-10 my-1">
     <label for="image">Insérer image</label>   <br>  
-          <input type="url" name="image" id="avatar" placeholder="Image Profil">
+          <input type="url" name="image" placeholder="Image Profil">
     </div>
     <div class="col-auto my-1">
       <button type="submit" name="signup-btn" class="btn btn-primary">Submit</button>

@@ -27,10 +27,10 @@
                   <div class="sidebar">
 
                         <div class="sidebar-btn">
-                              <?php if(isset($_SESSION['pseudo'])) {
+                              <?php if (isset($_SESSION['pseudo'])) {
                                     echo "Bienvenue " . $_SESSION['pseudo'];
                               }
-                              
+
                               ?>
                               <div class="sidebar-btn1">
                                     <a href="profil.php">
@@ -38,26 +38,26 @@
                                           </button>
                                     </a>
                               </div>
-                              <?php if(!isset($_SESSION['isConnected']) || $_SESSION['isConnected'] == false) { ?>
-                              <div class="sidebar-btn1">
-                                    <a href="compte.php">
-                                          <button class="sidebar-btn1">Se connecter
-                                          </button>
-                                    </a>
-                              </div>
-                              <div class="sidebar-btn1">
-                                    <a href="inscription.php">
-                                          <button class="sidebar-btn1">Création Compte
-                                          </button>
-                                    </a>
-                              </div>
+                              <?php if (!isset($_SESSION['isConnected']) || $_SESSION['isConnected'] == false) { ?>
+                                    <div class="sidebar-btn1">
+                                          <a href="compte.php">
+                                                <button class="sidebar-btn1">Se connecter
+                                                </button>
+                                          </a>
+                                    </div>
+                                    <div class="sidebar-btn1">
+                                          <a href="inscription.php">
+                                                <button class="sidebar-btn1">Création Compte
+                                                </button>
+                                          </a>
+                                    </div>
                               <?php } else { ?>
-                              <div class="sidebar-btn1">
-                                    <a href="deconnected.php">
-                                          <button class="sidebar-btn1">Se déconnecter
-                                          </button>
-                                    </a>
-                              </div>
+                                    <div class="sidebar-btn1">
+                                          <a href="deconnected.php">
+                                                <button class="sidebar-btn1">Se déconnecter
+                                                </button>
+                                          </a>
+                                    </div>
                               <?php } ?>
                         </div>
 
@@ -70,14 +70,14 @@
 
                         <div class="centertags">
                               <div id="actualite-flash">
-                                          <p>Actualité Flash</p>
+                                    <p>Actualité Flash</p>
                               </div>
-                              
+
                               <div id="sport">
-                                          <p>Sport</p>
+                                    <p>Sport</p>
                               </div>
                               <div id="politique">
-                                          <p>Politique</p>
+                                    <p>Politique</p>
                               </div>
                               <div id="histoire">
                                     <p>Histoire</p>
@@ -104,17 +104,17 @@
                               <div id="clear">
                                     <a href="index.php">
                                           <p>Clear</p>
-                                     </a>
+                                    </a>
                               </div>
                         </div>
 
                         <!--Zone de post début-->
                         <div class="centerblock-post">
-                              <div>
-                                    <div class="center-btn">
-                                          <img class="tagshots" src="assets\Images\TagShots (2).png" alt="">
-                                    </div>
+
+                              <div class="center-btn">
+                                    <img class="tagshots" src="assets\Images\TagShots (2).png" alt="">
                               </div>
+
 
                               <div class="center-post">
                                     <?php
@@ -123,28 +123,29 @@
 
 
                                     $requete = $database->prepare("SELECT publication.publi_id, tagshot, tag, image, date, pseudo, avatar FROM `publication` INNER JOIN users on publication.user = users.id ORDER BY date DESC");
-                                          // prepare = preparer la demande de donnée//
+                                    // prepare = preparer la demande de donnée//
                                     $requete->execute();
-                                          //excecute = excuter requete et recuperer//
-                                
+                                    //excecute = excuter requete et recuperer//
+                                    
                                     $tweets = $requete->fetchAll(PDO::FETCH_ASSOC);
                                     //fetchAll = transforme la réponse en qq chose de comprehensible pour le code(tableaux)//
                                     
 
-                                    foreach ($tweets as $tweet) {?>
+                                    foreach ($tweets as $tweet) { ?>
 
 
                                           <div class="center-postcontent">
                                                 <div class="profil">
                                                       <div class="user-id">
                                                             <div class="avatar-square">
-                                                                  <img class="avatar" src="<?php echo $tweet["avatar"] ?>" alt="logo">
+                                                                  <img class="avatar" id="avatar"
+                                                                        src="<?php echo $tweet["avatar"] ?>" alt="logo">
                                                             </div>
                                                             <div class="username">
                                                                   <?php echo $tweet["pseudo"] ?>
                                                                   <?php echo $tweet["publi_id"] ?>
                                                             </div>
-                                                            <div class="trash"> 
+                                                            <div class="trash">
                                                                   <div class="trash-btn">
                                                                         <p><i class="fa-solid fa-trash-can fa-2x"></i>
                                                                         </p>
@@ -154,7 +155,7 @@
                                                       </div>
                                                 </div>
                                                 <div class="text">
-                                                      <a href="delete.php?id=<?php echo $tweet["publi_id"]?>"></a>
+                                                      <a href="delete.php?id=<?php echo $tweet["publi_id"] ?>"></a>
                                                       <?php echo $tweet["tagshot"] ?>
                                                 </div>
                                                 <div class="tag">
@@ -165,40 +166,42 @@
 
                                                       ?>
                                                       <div class="image">
-                                                            <img src="<?php echo $tweet["image"] ?>" style="width: 350px;height:200px;">
+                                                            <img src="<?php echo $tweet["image"] ?>" id="img-center">
                                                       </div>
                                                 <?php } ?>
 
-                                                      <div class="date">
-                                                            <?php echo $tweet["date"] ?>        
+                                                <div class="date">
+                                                      <?php echo $tweet["date"] ?>
+                                                </div>
+                                          </div>
+
+                                          <!--Bouton de suppression-->
+
+                                          <?php if (isset($_SESSION['isConnected']) && $_SESSION['isConnected'] == true) { ?>
+                                                <div class="delete-container" id="center-delete">
+                                                      <div class="delete-adjusment">
+                                                            <div class="delete-txt">Voulez-vous vraiment supprimer le post ?
+                                                            </div>
+                                                            <div class="delete-btn">
+                                                                  <div class="yes">
+                                                                        <a href="delete.php?id=<?php echo $tweet["publi_id"] ?>"><!--on supprime la publication
+                                                                                    ayant cet id --> _
+                                                                              <button class="yes-btn">Oui</button>
+                                                                        </a>
+                                                                  </div>
+                                                                  <div class="no">
+                                                                        <button class="no-btn">Non</button>
+                                                                        </a>
+                                                                  </div>
+                                                            </div>
                                                       </div>
                                                 </div>
-
-                           <!--Bouton de suppression-->
-
-                  <?php  if(isset($_SESSION['isConnected']) && $_SESSION['isConnected'] == true) {?>
-                        <div class="delete-container">
-                              <div class="delete-adjusment">
-                                    <div class="delete-txt">Voulez-vous vraiment supprimer le post ?
-                                    </div>
-                                    <div class="delete-btn">
-                                          <div class="yes">
-                                                <a href="delete.php?id=<?php echo $tweet["publi_id"]?>"><!--on supprime la publication
-                                                                         ayant cet id -->   _   
-                                          <button class="yes-btn">Oui</button>
-                                                </a>
-                                          </div>
-                                          <div class="no"> 
-                                                <button class="no-btn">Non</button>
-                                          </a>
-                                          </div>
-                                    </div>
+                                          <?php }
+                                    }
+                                    ; ?>
                               </div>
                         </div>
-                  <?php } };?>
-                              </div>
-                        </div>
-                        
+
                         <!--Fin bouton de suppression-->
 
 
@@ -237,10 +240,10 @@
                                                 </select>
                                           </div>
                                           <div class="post-text">
-                                                <label for="tagshot"> Tagshot</label>     
-                                                <input type="text" name="tagshot" id="tagshot" cols="60" rows="10"/>
-                                    
-                                                <label for="image">Insérer image</label>     
+                                                <label for="tagshot"> Tagshot</label>
+                                                <input type="text" name="tagshot" id="tagshot" cols="60" rows="10" />
+
+                                                <label for="image">Insérer image</label>
                                                 <input type="url" name="image" id="image">
                                           </div>
                                           <div class="btn-post">
@@ -260,32 +263,32 @@
 
 
                         <!--Inscris-toi ! -->
-                        <?php 
-                        if(!isset($_SESSION["isConnected"]) || $_SESSION["isConnected"] == false ) {
-                        ?>
-                           
+                        <?php
+                        if (!isset($_SESSION["isConnected"]) || $_SESSION["isConnected"] == false) {
+                              ?>
 
-                        <div class="inscription-container"> 
-                              <div class="inscription-overlay">
-                              </div>
-                              <div class="inscription-block">
-                                    <div class="inscription-txt">Pour continuer :
+
+                              <div class="inscription-container">
+                                    <div class="inscription-overlay">
                                     </div>
-                                    <div class="container-btn">
-                                          <div class="connexion">
-                                                <a href="compte.php">      
-                                                      <button class="modalconnexion-btn">Me Connecter</button>
-                                                </a>
+                                    <div class="inscription-block">
+                                          <div class="inscription-txt">Pour continuer :
                                           </div>
-                                          <div class="inscription">
-                                                <a href="inscription.php">      
-                                                      <button class="modalconnexion-btn">Je m'inscris</button>
-                                                </a>
+                                          <div class="container-btn">
+                                                <div class="connexion">
+                                                      <a href="compte.php">
+                                                            <button class="modalconnexion-btn">Me Connecter</button>
+                                                      </a>
+                                                </div>
+                                                <div class="inscription">
+                                                      <a href="inscription.php">
+                                                            <button class="modalconnexion-btn">Je m'inscris</button>
+                                                      </a>
+                                                </div>
                                           </div>
                                     </div>
                               </div>
-                        </div>
-                         <?php
+                              <?php
                         }
                         ?>
 
@@ -293,66 +296,89 @@
 
                         <button class="modal-btn modal-trigger fa-4x" id="modal-btn">+</button>
                   </div>
-                 
+
                   <div class="responsive-btn">
                         <div class="burger">
                               <p>
                                     <i class="fa-solid fa-bars"></i>
                               </p>
                         </div>
-                        <div class="responsive-post">  
+                        <div class="responsive-post">
                               <p>
-                                     <i class="fa-solid fa-plus" id="responsive-btn"></i>
-                              </p> 
+                                    <i class="fa-solid fa-plus" id="responsive-btn"></i>
+                              </p>
                         </div>
-                        <div class="responsive-tags">
+                        <div class="responsive-hashtag">
                               <p>
-                                     <i class="fa-regular fa-hashtag"></i>
+                                    <i class="fa-regular fa-hashtag"></i>
                               </p>
                         </div>
                   </div>
-            
+
             </div>
+
+
+            <div class="responsive-tags" id="reponsive-tags">
+
+                  <div id="act-resp">
+                        <p>Actualité Flash</p>
+                  </div>
+
+                  <div id="spo-resp">
+                        <p>Sport</p>
+                  </div>
+
+                  <div id="pol-resp">
+                        <p>Politique</p>
+                  </div>
+
+                  <div id="his-resp">
+                        <p>Histoire</p>
+                  </div>
+
+                  <div id="cin-resp">
+                        <p>Cinéma</p>
+                  </div>
+
+                  <div id="eve-resp">
+                        <p>Evenènements</p>
+                  </div>
+
+                  <div id="mus-resp">
+                        <p>Musique</p>
+                  </div>
+
+                  <div id="geo-resp">
+                        <p>Géopolitique</p>
+                  </div>
+
+                  <div id="san-resp">
+                        <p>Santé</p>
+                  </div>
+
+                  <div id="env-resp">
+                        <p>Environnement</p>
+                  </div>
+
+
+                  <div id="clear">
+                        <a href="index.php">
+                              <p>Clear</p>
+                        </a>
+                  </div>
+
+
+            </div>
+
             <!--Fin Center-->
 
-            <!--Right
-
-    <div class="right">
-       <div class="right-top">
-             <div class="right-logo">
-                  <img src="Images\T.png" alt="image logo"  height="60px" width="60px">
-             </div>
-             <div class="right-profil">
-                 <a href="inscription.html">
-                    <button class="right-profilbtn">
-                          <p><i class="fa-regular fa-user fa-2x"></i></p>  
-                   </button>
-                 </a>                         
-             </div>
-       </div>
-       <div class="right-btn">
-            <p class="right-txt">Bienvenue sut Tagshots !</p>
-             <div>  
-               <button class="rightbtn-1">Se connecter</button>            
-             </div>
-             <div>
-               <button class="rightbtn-2">S'inscrire</button>                 
-             </div>
-             <div>  
-               <button class="rightbtn-3">Nous Contacter</button>               
-             </div>
-       </div>
-
-
-   </div> -->
-
-            <!--Fin Right-->
 
       </div>
 
-      <script src="https://kit.fontawesome.com/0b4d105291.js" crossorigin="anonymous"></script>
+
       <script src="assets\sidebar.js"></script>
       <script src="assets\center.js"></script>
+      <script src="https://kit.fontawesome.com/0b4d105291.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

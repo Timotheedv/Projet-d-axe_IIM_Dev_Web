@@ -63,7 +63,10 @@
 -->
 
 <div class="inblock">
-<div class="insize">
+<div class="center-btn">
+      <img class="tagshots" id="tagshot" src="assets\Images\TagShots (2).png" alt="">
+</div>
+<div class="insize" id="square">
 <form action="login.php" method="POST">
   <div class="form-row align-items-center">
     <div class="col-sm-10 my-1">
@@ -74,18 +77,7 @@
     <div class="col-sm-10" >
       <label for="inputPassword6">Password</label>
       <input type="password" name="password" id="password" class="form-control mx-sm-0" aria-describedby="passwordHelpInline" placeholder="Password">
-      <!--<small id="passwordHelpInline" class="text-muted">
-        Must be 8-20 characters long.
-      </small>
-    </div>
-    <div class="col-auto my-1">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
-        <label class="form-check-label" for="autoSizingCheck2">
-          Remember me
-        </label>
-      </div>-->
-    </div>
+
     <div class="col-auto my-1">
       <button type="submit" name="login-btn" class="btn btn-primary">Submit</button>
     </div>
